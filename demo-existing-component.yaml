@@ -1,0 +1,17 @@
+apiVersion: backstage.io/v1alpha1
+kind: Component
+metadata:
+  name: legacy-accounting-system
+  description: Existing accounting system running on-premise
+  tags: [java, legacy, on-prem]
+  links:
+    - url: https://internal.mitrphol.com/accounting
+      title: Legacy Dashboard
+      icon: dashboard
+spec:
+  type: service
+  lifecycle: production
+  owner: mitr-phol-finance-team
+  system: smart-farming-platform
+  dependsOn:
+    - resource:logistics-db
